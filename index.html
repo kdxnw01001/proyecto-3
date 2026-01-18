@@ -324,31 +324,31 @@
 
                 <!-- Formulario -->
                 <div class="bg-brand-gray p-8 rounded-2xl shadow-lg border border-gray-800">
-                    <form onsubmit="event.preventDefault(); alert('Este es un formulario de demostración. En la web final, esto enviará un email.');">
+                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="contact">
+                        <p class="hidden">
+                            <label>No llenar si eres humano: <input name="bot-field"></label>
+                        </p>
                         <div class="mb-6">
                             <label for="name" class="block text-sm font-bold text-gray-400 mb-2 uppercase">Nombre Completo</label>
-                            <input type="text" id="name" class="w-full bg-brand-black border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow transition" placeholder="Tu nombre">
+                            <input type="text" id="name" name="name" required class="w-full bg-brand-black border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow transition" placeholder="Tu nombre">
                         </div>
-                        
+
                         <div class="mb-6">
                             <label for="email" class="block text-sm font-bold text-gray-400 mb-2 uppercase">Email</label>
-                            <input type="email" id="email" class="w-full bg-brand-black border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow transition" placeholder="tu@email.com">
+                            <input type="email" id="email" name="email" required class="w-full bg-brand-black border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow transition" placeholder="tu@email.com">
                         </div>
 
                         <div class="mb-6">
                             <label for="plan" class="block text-sm font-bold text-gray-400 mb-2 uppercase">Interesado en</label>
-                            <select id="plan" class="w-full bg-brand-black border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow transition">
+                            <select id="plan" name="plan" class="w-full bg-brand-black border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow transition">
                                 <option>Selecciona una opción</option>
                                 <option>Plan Inicial</option>
                                 <option>Transformación</option>
-                                <option>1 a 1 Élite</option>
-                                <option>Solo Información</option>
-                            </select>
-                        </div>
 
                         <div class="mb-6">
                             <label for="message" class="block text-sm font-bold text-gray-400 mb-2 uppercase">Objetivo Principal</label>
-                            <textarea id="message" rows="4" class="w-full bg-brand-black border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow transition" placeholder="Cuéntame brevemente qué quieres conseguir..."></textarea>
+                            <textarea id="message" name="message" rows="4" class="w-full bg-brand-black border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow transition" placeholder="Cuéntame brevemente qué quieres conseguir..."></textarea>
                         </div>
 
                         <button type="submit" class="w-full bg-brand-yellow text-brand-black font-bold py-4 rounded hover:bg-white transition duration-300 uppercase tracking-wide">
