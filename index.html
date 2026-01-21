@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrenador Personal | Boceto</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
-    
-    <script>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Entrenador Personal | Boceto</title>
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- Font Awesome -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap"
+            rel="stylesheet">
+
+        <script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -27,7 +31,7 @@
             }
         }
     </script>
-    <style>
+        <style>
         /* Ajustes para imágenes de fondo y efectos */
         .hero-bg {
             background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
@@ -35,12 +39,12 @@
             background-position: center;
             background-attachment: fixed;
         }
-        
+
         .accent-underline {
             display: inline-block;
             position: relative;
         }
-        
+
         .accent-underline::after {
             content: '';
             position: absolute;
@@ -53,7 +57,7 @@
             transform-origin: bottom right;
             transition: transform 0.25s ease-out;
         }
-        
+
         .accent-underline:hover::after {
             transform: scaleX(1);
             transform-origin: bottom left;
@@ -68,318 +72,507 @@
             color: #666;
         }
     </style>
-</head>
-<body class="bg-brand-black text-white font-sans antialiased">
+    </head>
 
-    <!-- Navegación -->
-    <nav class="fixed w-full z-50 bg-brand-black/90 backdrop-blur-sm border-b border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center">
-                    <a href="#" class="text-2xl font-black tracking-tighter text-white">
-                        MIGUEL<span class="text-brand-yellow">FIT</span>
+    <body class="bg-brand-black text-white font-sans antialiased">
+
+        <!-- Navegación -->
+        <nav
+            class="fixed w-full z-50 bg-brand-black/90 backdrop-blur-sm border-b border-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-20">
+                    <!-- Logo -->
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="#"
+                            class="text-2xl font-black tracking-tighter text-white">
+                            MIGUEL<span class="text-brand-yellow">FIT</span>
+                        </a>
+                    </div>
+
+                    <!-- Menú Desktop -->
+                    <div class="hidden md:flex space-x-8 items-center">
+                        <a href="#inicio"
+                            class="accent-underline text-sm font-bold uppercase tracking-wide hover:text-brand-yellow transition">Inicio</a>
+                        <a href="#sobre-mi"
+                            class="accent-underline text-sm font-bold uppercase tracking-wide hover:text-brand-yellow transition">Sobre
+                            Mí</a>
+                        <a href="#planes"
+                            class="accent-underline text-sm font-bold uppercase tracking-wide hover:text-brand-yellow transition">Planes</a>
+                        <a href="#contacto"
+                            class="bg-brand-yellow text-brand-black px-5 py-2 rounded font-bold uppercase hover:bg-white transition duration-300">Contáctanos</a>
+                    </div>
+
+                    <!-- Botón Menú Móvil -->
+                    <div class="md:hidden flex items-center">
+                        <button id="mobile-menu-btn"
+                            class="text-white hover:text-brand-yellow focus:outline-none">
+                            <i class="fas fa-bars text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menú Móvil (Oculto por defecto) -->
+            <div id="mobile-menu"
+                class="hidden md:hidden bg-brand-gray border-t border-gray-800">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                    <a href="#inicio"
+                        class="block px-3 py-2 rounded-md text-base font-bold text-white hover:text-brand-yellow">INICIO</a>
+                    <a href="#sobre-mi"
+                        class="block px-3 py-2 rounded-md text-base font-bold text-white hover:text-brand-yellow">SOBRE
+                        MÍ</a>
+                    <a href="#planes"
+                        class="block px-3 py-2 rounded-md text-base font-bold text-white hover:text-brand-yellow">PLANES</a>
+                    <a href="#contacto"
+                        class="block px-3 py-2 rounded-md text-base font-bold text-brand-yellow hover:text-white">CONTÁCTANOS</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Sección Inicio (Hero) -->
+        <section id="inicio"
+            class="hero-bg h-screen flex items-center justify-center relative">
+            <div class="text-center px-4 max-w-4xl mx-auto animate-fade-in-up">
+                <h2
+                    class="text-brand-yellow font-bold tracking-widest uppercase mb-4 text-sm md:text-base">Tu
+                    mejor versión empieza hoy</h2>
+                <h1
+                    class="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
+                    SUPERA TUS <br /> <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-brand-yellow to-yellow-200">LÍMITES</span>
+                </h1>
+                <p
+                    class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+                    Entrenamiento personalizado diseñado científicamente para
+                    alcanzar tus objetivos. No es solo ejercicio, es un estilo
+                    de vida. Los limites los pones tu... Vamos a romperlos.
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <a href="#planes"
+                        class="bg-brand-yellow text-brand-black px-8 py-4 rounded font-bold text-lg hover:bg-white transition duration-300 uppercase tracking-wide">
+                        Ver Planes
+                    </a>
+                    <a href="#sobre-mi"
+                        class="border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-brand-black transition duration-300 uppercase tracking-wide">
+                        Conóceme
                     </a>
                 </div>
-                
-                <!-- Menú Desktop -->
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#inicio" class="accent-underline text-sm font-bold uppercase tracking-wide hover:text-brand-yellow transition">Inicio</a>
-                    <a href="#sobre-mi" class="accent-underline text-sm font-bold uppercase tracking-wide hover:text-brand-yellow transition">Sobre Mí</a>
-                    <a href="#planes" class="accent-underline text-sm font-bold uppercase tracking-wide hover:text-brand-yellow transition">Planes</a>
-                    <a href="#contacto" class="bg-brand-yellow text-brand-black px-5 py-2 rounded font-bold uppercase hover:bg-white transition duration-300">Contáctanos</a>
-                </div>
-
-                <!-- Botón Menú Móvil -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-white hover:text-brand-yellow focus:outline-none">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
             </div>
-        </div>
 
-        <!-- Menú Móvil (Oculto por defecto) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-brand-gray border-t border-gray-800">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
-                <a href="#inicio" class="block px-3 py-2 rounded-md text-base font-bold text-white hover:text-brand-yellow">INICIO</a>
-                <a href="#sobre-mi" class="block px-3 py-2 rounded-md text-base font-bold text-white hover:text-brand-yellow">SOBRE MÍ</a>
-                <a href="#planes" class="block px-3 py-2 rounded-md text-base font-bold text-white hover:text-brand-yellow">PLANES</a>
-                <a href="#contacto" class="block px-3 py-2 rounded-md text-base font-bold text-brand-yellow hover:text-white">CONTÁCTANOS</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Sección Inicio (Hero) -->
-    <section id="inicio" class="hero-bg h-screen flex items-center justify-center relative">
-        <div class="text-center px-4 max-w-4xl mx-auto animate-fade-in-up">
-            <h2 class="text-brand-yellow font-bold tracking-widest uppercase mb-4 text-sm md:text-base">Tu mejor versión empieza hoy</h2>
-            <h1 class="text-5xl md:text-7xl font-black text-white mb-6 leading-tight">
-                SUPERA TUS <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-yellow to-yellow-200">LÍMITES</span>
-            </h1>
-            <p class="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
-                Entrenamiento personalizado diseñado científicamente para alcanzar tus objetivos. No es solo ejercicio, es un estilo de vida. Los limites los pones tu... Vamos a romperlos.
-            </p>
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="#planes" class="bg-brand-yellow text-brand-black px-8 py-4 rounded font-bold text-lg hover:bg-white transition duration-300 uppercase tracking-wide">
-                    Ver Planes
-                </a>
-                <a href="#sobre-mi" class="border-2 border-white text-white px-8 py-4 rounded font-bold text-lg hover:bg-white hover:text-brand-black transition duration-300 uppercase tracking-wide">
-                    Conóceme
+            <!-- Flecha scroll -->
+            <div
+                class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <a href="#sobre-mi" class="text-white hover:text-brand-yellow">
+                    <i class="fas fa-chevron-down text-2xl"></i>
                 </a>
             </div>
-        </div>
-        
-        <!-- Flecha scroll -->
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <a href="#sobre-mi" class="text-white hover:text-brand-yellow">
-                <i class="fas fa-chevron-down text-2xl"></i>
-            </a>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sección Sobre Mí -->
-    <section id="sobre-mi" class="py-20 bg-brand-black">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <!-- Imagen -->
-                <div class="relative group">
-                    <div class="absolute -inset-4 bg-brand-yellow rounded-lg opacity-20 group-hover:opacity-40 transition duration-500 blur-lg"></div>
-                    <img 
-                        src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                        alt="Entrenador Personal" 
-                        class="relative rounded-lg shadow-2xl w-full object-cover h-[500px] grayscale group-hover:grayscale-0 transition duration-500"
-                        onerror="this.onerror=null;this.src='https://via.placeholder.com/600x800/333/FACC15?text=Foto+Entrenador';"
-                    >
-                </div>
-
-                <!-- Contenido -->
-                <div>
-                    <h3 class="text-brand-yellow font-bold uppercase tracking-widest mb-2">Sobre Mí</h3>
-                    <h2 class="text-4xl font-black text-white mb-6">MÁS QUE UN ENTRENADOR</h2>
-                    <p class="text-gray-400 mb-6 leading-relaxed">
-                        Hola, soy Alex. Llevo más de 10 años ayudando a personas como tú a transformar su físico y mentalidad. Mi filosofía no se basa en dietas extremas ni rutinas imposibles, sino en la constancia y la adaptación.
-                    </p>
-                    <p class="text-gray-400 mb-8 leading-relaxed">
-                        Certificado en Ciencias del Deporte y Nutrición, mi misión es darte las herramientas para que seas la versión más fuerte y saludable de ti mismo.
-                    </p>
-
-                    <div class="grid grid-cols-2 gap-6 mb-8">
-                        <div>
-                            <h4 class="text-3xl font-black text-brand-yellow">10+</h4>
-                            <p class="text-sm text-gray-500 uppercase">Años de experiencia</p>
+        <!-- Sección Sobre Mí -->
+        <section id="sobre-mi" class="py-20 bg-brand-black">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <!-- Imagen -->
+                    <div class="relative group">
+                        <div
+                            class="absolute -inset-4 bg-brand-yellow rounded-lg opacity-20 group-hover:opacity-40 transition duration-500 blur-lg">
                         </div>
-                        <div>
-                            <h4 class="text-3xl font-black text-brand-yellow">500+</h4>
-                            <p class="text-sm text-gray-500 uppercase">Clientes felices</p>
-                        </div>
+                        <img
+                            src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                            alt="Entrenador Personal"
+                            class="relative rounded-lg shadow-2xl w-full object-cover h-[500px] grayscale group-hover:grayscale-0 transition duration-500"
+                            onerror="this.onerror=null;this.src='https://via.placeholder.com/600x800/333/FACC15?text=Foto+Entrenador';">
                     </div>
 
-                    <ul class="space-y-4">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-brand-yellow mr-3"></i>
-                            <span class="text-white font-medium">Certificación Internacional</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-brand-yellow mr-3"></i>
-                            <span class="text-white font-medium">Planes 100% Personalizados</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-brand-yellow mr-3"></i>
-                            <span class="text-white font-medium">Soporte 24/7</span>
-                        </li>
-                    </ul>
+                    <!-- Contenido -->
+                    <div>
+                        <h3
+                            class="text-brand-yellow font-bold uppercase tracking-widest mb-2">Sobre
+                            Mí</h3>
+                        <h2 class="text-4xl font-black text-white mb-6">MÁS QUE
+                            UN ENTRENADOR</h2>
+                        <p class="text-gray-400 mb-6 leading-relaxed">
+                            Hola, soy Alex. Llevo más de 10 años ayudando a
+                            personas como tú a transformar su físico y
+                            mentalidad. Mi filosofía no se basa en dietas
+                            extremas ni rutinas imposibles, sino en la
+                            constancia y la adaptación.
+                        </p>
+                        <p class="text-gray-400 mb-8 leading-relaxed">
+                            Certificado en Ciencias del Deporte y Nutrición, mi
+                            misión es darte las herramientas para que seas la
+                            versión más fuerte y saludable de ti mismo.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-6 mb-8">
+                            <div>
+                                <h4
+                                    class="text-3xl font-black text-brand-yellow">10+</h4>
+                                <p class="text-sm text-gray-500 uppercase">Años
+                                    de experiencia</p>
+                            </div>
+                            <div>
+                                <h4
+                                    class="text-3xl font-black text-brand-yellow">500+</h4>
+                                <p
+                                    class="text-sm text-gray-500 uppercase">Clientes
+                                    felices</p>
+                            </div>
+                        </div>
+
+                        <ul class="space-y-4">
+                            <li class="flex items-center">
+                                <i
+                                    class="fas fa-check text-brand-yellow mr-3"></i>
+                                <span
+                                    class="text-white font-medium">Certificación
+                                    Internacional</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i
+                                    class="fas fa-check text-brand-yellow mr-3"></i>
+                                <span class="text-white font-medium">Planes 100%
+                                    Personalizados</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i
+                                    class="fas fa-check text-brand-yellow mr-3"></i>
+                                <span class="text-white font-medium">Soporte
+                                    24/7</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sección Planes y Servicios -->
-    <section id="planes" class="py-20 bg-brand-gray relative">
-        <!-- Elemento decorativo de fondo -->
-        <div class="absolute top-0 right-0 w-64 h-64 bg-brand-yellow opacity-5 rounded-full filter blur-3xl translate-x-1/2 -translate-y-1/2"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center mb-16">
-                <h3 class="text-brand-yellow font-bold uppercase tracking-widest mb-2">Mis Servicios</h3>
-                <h2 class="text-4xl md:text-5xl font-black text-white">ELIGE TU PLAN</h2>
-                <div class="w-24 h-1 bg-brand-yellow mx-auto mt-6"></div>
+        <!-- Sección Planes y Servicios -->
+        <section id="planes" class="py-20 bg-brand-gray relative">
+            <!-- Elemento decorativo de fondo -->
+            <div
+                class="absolute top-0 right-0 w-64 h-64 bg-brand-yellow opacity-5 rounded-full filter blur-3xl translate-x-1/2 -translate-y-1/2">
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Plan Básico -->
-                <div class="bg-brand-black border border-gray-800 rounded-2xl p-8 hover:border-brand-yellow transition duration-300 transform hover:-translate-y-2 group">
-                    <div class="mb-6">
-                        <i class="fas fa-dumbbell text-4xl text-gray-600 group-hover:text-brand-yellow transition"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-2">PLAN INICIAL</h3>
-                    <p class="text-gray-400 text-sm mb-6">Ideal para empezar a moverte.</p>
-                    <div class="text-4xl font-black text-white mb-6">40€<span class="text-lg text-gray-500 font-normal">/mes</span></div>
-
-                    <ul class="space-y-4 mb-8 text-gray-300 text-sm">
-                        <li class="flex items-center"><i class="fas fa-check text-brand-yellow mr-2"></i> Rutina mensual PDF</li>
-                        <li class="flex items-center"><i class="fas fa-check text-brand-yellow mr-2"></i> Guía de nutrición básica</li>
-                        <li class="flex items-center"><i class="fas fa-check text-brand-yellow mr-2"></i> Revisión mensual</li>
-                        <li class="flex items-center text-gray-600"><i class="fas fa-times mr-2"></i> Contacto por WhatsApp</li>
-                    </ul>
-                    <a href="#contacto" class="block w-full text-center border border-white text-white py-3 rounded font-bold hover:bg-white hover:text-brand-black transition uppercase">Empezar</a>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16">
+                    <h3
+                        class="text-brand-yellow font-bold uppercase tracking-widest mb-2">Mis
+                        Servicios</h3>
+                    <h2 class="text-4xl md:text-5xl font-black text-white">ELIGE
+                        TU PLAN</h2>
+                    <div class="w-24 h-1 bg-brand-yellow mx-auto mt-6"></div>
                 </div>
 
-                <!-- Plan Pro (Destacado) -->
-                <div class="bg-brand-black border-2 border-brand-yellow rounded-2xl p-8 transform md:-translate-y-4 shadow-[0_0_30px_rgba(250,204,21,0.15)] relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-brand-yellow text-brand-black text-xs font-bold px-3 py-1 uppercase">Más Popular</div>
-                    <div class="mb-6">
-                        <i class="fas fa-fire text-4xl text-brand-yellow"></i>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Plan Básico -->
+                    <div
+                        class="bg-brand-black border border-gray-800 rounded-2xl p-8 hover:border-brand-yellow transition duration-300 transform hover:-translate-y-2 group">
+                        <div class="mb-6">
+                            <i
+                                class="fas fa-dumbbell text-4xl text-gray-600 group-hover:text-brand-yellow transition"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">PLAN
+                            INICIAL</h3>
+                        <p class="text-gray-400 text-sm mb-6">Ideal para empezar
+                            a moverte.</p>
+                        <div
+                            class="text-4xl font-black text-white mb-6">40€<span
+                                class="text-lg text-gray-500 font-normal">/mes</span></div>
+
+                        <ul class="space-y-4 mb-8 text-gray-300 text-sm">
+                            <li class="flex items-center"><i
+                                    class="fas fa-check text-brand-yellow mr-2"></i>
+                                Rutina mensual PDF</li>
+                            <li class="flex items-center"><i
+                                    class="fas fa-check text-brand-yellow mr-2"></i>
+                                Guía de nutrición básica</li>
+                            <li class="flex items-center"><i
+                                    class="fas fa-check text-brand-yellow mr-2"></i>
+                                Revisión mensual</li>
+                            <li class="flex items-center text-gray-600"><i
+                                    class="fas fa-times mr-2"></i> Contacto por
+                                WhatsApp</li>
+                        </ul>
+                        <a href="#contacto"
+                            class="block w-full text-center border border-white text-white py-3 rounded font-bold hover:bg-white hover:text-brand-black transition uppercase">Empezar</a>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">TRANSFORMACIÓN</h3>
-                    <p class="text-gray-400 text-sm mb-6">Resultados acelerados y seguimiento.</p>
-                    <div class="text-4xl font-black text-white mb-6">80€<span class="text-lg text-gray-500 font-normal">/mes</span></div>
 
-                    <ul class="space-y-4 mb-8 text-gray-300 text-sm">
-                        <li class="flex items-center"><i class="fas fa-check text-brand-yellow mr-2"></i> Rutina 100% personalizada</li>
-                        <li class="flex items-center"><i class="fas fa-check text-brand-yellow mr-2"></i> Plan nutricional adaptado</li>
-                        <li class="flex items-center"><i class="fas fa-check text-brand-yellow mr-2"></i> Revisiones quincenales</li>
-                        <li class="flex items-center"><i class="fas fa-check text-brand-yellow mr-2"></i> Soporte por email</li>
-                    </ul>
-                    <a href="#contacto" class="block w-full text-center bg-brand-yellow text-brand-black py-3 rounded font-bold hover:bg-white transition uppercase shadow-lg">Elegir Plan</a>
-                </div>
+                    <!-- Plan Pro (Destacado) -->
+                    <div
+                        class="bg-brand-black border-2 border-brand-yellow rounded-2xl p-8 transform md:-translate-y-4 shadow-[0_0_30px_rgba(250,204,21,0.15)] relative overflow-hidden">
+                        <div
+                            class="absolute top-0 right-0 bg-brand-yellow text-brand-black text-xs font-bold px-3 py-1 uppercase">
+                            Más
+                            Popular</div>
+                        <div class="mb-6">
+                            <i
+                                class="fas fa-fire text-4xl text-brand-yellow"></i>
+                        </div>
+                        <h3
+                            class="text-xl font-bold text-white mb-2">TRANSFORMACIÓN</h3>
+                        <p class="text-gray-400 text-sm mb-6">Resultados
+                            acelerados y seguimiento.</p>
+                        <div
+                            class="text-4xl font-black text-white mb-6">80€<span
+                                class="text-lg text-gray-500 font-normal">/mes</span></div>
 
-                <!-- Plan Élite -->
-                <div class="bg-brand-black border border-gray-800 rounded-2xl p-8 hover:border-brand-yellow transition duration-300 transform hover:-translate-y-2 group">
-                    <div class="mb-6">
-                        <i class="fas fa-crown text-4xl text-gray-600 group-hover:text-brand-yellow transition"></i>
+                        <ul class="space-y-4 mb-8 text-gray-300 text-sm">
+                            <li class="flex items-center"><i
+                                    class="fas fa-check text-brand-yellow mr-2"></i>
+                                Rutina 100% personalizada</li>
+                            <li class="flex items-center"><i
+                                    class="fas fa-check text-brand-yellow mr-2"></i>
+                                Plan nutricional adaptado</li>
+                            <li class="flex items-center"><i
+                                    class="fas fa-check text-brand-yellow mr-2"></i>
+                                Revisiones quincenales</li>
+                            <li class="flex items-center"><i
+                                    class="fas fa-check text-brand-yellow mr-2"></i>
+                                Soporte por email</li>
+                        </ul>
+                        <a href="#contacto"
+                            class="block w-full text-center bg-brand-yellow text-brand-black py-3 rounded font-bold hover:bg-white transition uppercase shadow-lg">Elegir
+                            Plan</a>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-2">1 A 1 ÉLITE</h3>
-                    <p class="text-gray-400 text-sm mb-6">Máxima atención y detalle.</p>
-                    <div class="text-4xl font-black text-white mb-6">150€<span class="text-lg text-gray-500 font-normal">/mes</span></div>
 
-                    <ul class="space-y-4 mb-8 text-gray-300 text-sm">
-                        <li class="flex items-center"><i class="fas fa-check text-brand-yellow mr-2"></i> Todo lo del plan Transformación</li>
-                        <li class="flex items-center"><i class="fas fa-check text-brand-yellow mr-2"></i> Video-llamada semanal</li>
-                        <li class="flex items-center"><i class="fas fa-check text-brand-yellow mr-2"></i> Ajustes diarios si es necesario</li>
-                        <li class="flex items-center"><i class="fas fa-check text-brand-yellow mr-2"></i> WhatsApp directo 24/7</li>
-                    </ul>
-                    <a href="#contacto" class="block w-full text-center border border-white text-white py-3 rounded font-bold hover:bg-white hover:text-brand-black transition uppercase">Aplicar</a>
+                    <!-- Plan Élite -->
+                    <div
+                        class="bg-brand-black border border-gray-800 rounded-2xl p-8 hover:border-brand-yellow transition duration-300 transform hover:-translate-y-2 group">
+                        <div class="mb-6">
+                            <i
+                                class="fas fa-crown text-4xl text-gray-600 group-hover:text-brand-yellow transition"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">PRESENCIAL
+                            1 A 1</h3>
+                        <p class="text-gray-400 text-sm mb-6">Máxima atención y
+                            detalle.</p>
+                        <div class="text-4xl font-black text-white mb-2">
+                            100$<span
+                                class="text-lg text-gray-500 font-normal">/semana</span>
+                        </div>
+                        <div class="text-1xl font-black text-white mb-6">
+                            25$<span
+                                class="text-lg text-gray-500 font-normal">/semana</span>
+                        </div>
+
+                        <ul class="space-y-4 mb-8 text-gray-300 text-sm">
+                            <li class="flex items-center">
+                                <i
+                                    class="fas fa-check text-brand-yellow mr-2"></i>
+                                Dieta
+                                Personalizada
+                            </li>
+                            <li class="flex items-center">
+                                <i
+                                    class="fas fa-check text-brand-yellow mr-2"></i>
+                                Entrenamiento Personalizado
+                            </li>
+                            <li class="flex items-center">
+                                <i
+                                    class="fas fa-check text-brand-yellow mr-2"></i>
+                                Seguimiento
+                                24/7
+                            </li>
+                            <li class="flex items-center">
+                                <i
+                                    class="fas fa-check text-brand-yellow mr-2"></i>
+                                Maximo 4
+                                Personas por sesion
+                            </li>
+                            <li class="flex items-center">
+                                <i
+                                    class="fas fa-check text-brand-yellow mr-2"></i>
+                                Entrena
+                                conmigo, me puedo acercar
+                            </li>
+                        </ul>
+                        <a href="#contacto"
+                            class="block w-full text-center border border-white text-white py-3 rounded font-bold hover:bg-white hover:text-brand-black transition uppercase">Aplicar</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Sección CTA Intermedia -->
-    <section class="py-16 bg-brand-yellow text-brand-black">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-black mb-4 uppercase">¿No sabes qué plan elegir?</h2>
-            <p class="text-lg font-medium mb-8 max-w-2xl mx-auto">Agenda una llamada de descubrimiento gratuita de 15 minutos y analicemos juntos tus objetivos.</p>
-            <button onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})" class="bg-black text-white px-8 py-3 rounded font-bold hover:bg-gray-800 transition uppercase shadow-lg">
-                Hablar con Alex
-            </button>
-        </div>
-    </section>
-
-    <!-- Sección Contáctanos -->
-    <section id="contacto" class="py-20 bg-brand-black">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                
-                <!-- Info de Contacto -->
-                <div>
-                    <h3 class="text-brand-yellow font-bold uppercase tracking-widest mb-2">Contáctanos</h3>
-                    <h2 class="text-4xl font-black text-white mb-6">EMPIEZA TU CAMBIO</h2>
-                    <p class="text-gray-400 mb-10">
-                        Rellena el formulario o contáctame directamente por redes sociales. Estoy listo para ayudarte a conseguir el cuerpo que deseas.
+        <section class="py-16 bg-brand-black">
+            <div
+                class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
+                <h2 class="md:col-span-3 text-center">
+                    <p
+                        class="text-brand-white text-lg md:text-xl font-medium leading-relaxed italic">
+                        ❝ Dios puso a todos la capacidad de ser los
+                        protagonistas
+                        de su propia vida,
                     </p>
+                    <p
+                        class="text-brand-white text-lg md:text-xl font-medium leading-relaxed italic">
+                        ¿qué esperas tú para serlo de la tuya? ❞</p>
+                </h2>
+            </div>
+        </section>
 
-                    <div class="space-y-6">
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-brand-yellow">
-                                <i class="fas fa-envelope text-xl"></i>
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="text-lg font-bold text-white">Email</h4>
-                                <p class="text-gray-400">entrenador@ejemplo.com</p>
-                            </div>
-                        </div>
+        <!-- Sección CTA Intermedia -->
+        <section class="py-16 bg-brand-yellow text-brand-black">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-black mb-4 uppercase">¿No
+                    sabes qué plan elegir?</h2>
+                <p class="text-lg font-medium mb-8 max-w-2xl mx-auto">Agenda una
+                    llamada de descubrimiento gratuita de 15 minutos y
+                    analicemos juntos tus objetivos.</p>
+                <button
+                    onclick="document.getElementById('contacto').scrollIntoView({behavior: 'smooth'})"
+                    class="bg-black text-white px-8 py-3 rounded font-bold hover:bg-gray-800 transition uppercase shadow-lg">
+                    Hablar con Alex
+                </button>
+            </div>
+        </section>
 
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-brand-yellow">
-                                <i class="fab fa-instagram text-xl"></i>
-                            </div>
-                            <div class="ml-4">
-                                <h4 class="text-lg font-bold text-white">Instagram</h4>
-                                <p class="text-gray-400">@AlexFit_Oficial</p>
-                            </div>
-                        </div>
+        <!-- Sección Contáctanos -->
+        <section id="contacto" class="py-20 bg-brand-black">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
 
-                        <div class="flex items-start">
-                            <div class="flex-shrink-0 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-brand-yellow">
-                                <i class="fab fa-whatsapp text-xl"></i>
+                    <!-- Info de Contacto -->
+                    <div>
+                        <h3
+                            class="text-brand-yellow font-bold uppercase tracking-widest mb-2">Contáctanos</h3>
+                        <h2 class="text-4xl font-black text-white mb-6">EMPIEZA
+                            TU CAMBIO</h2>
+                        <p class="text-gray-400 mb-10">
+                            Rellena el formulario o contáctame directamente por
+                            redes sociales. Estoy listo para ayudarte a
+                            conseguir el cuerpo que deseas.
+                        </p>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-brand-yellow">
+                                    <i class="fas fa-envelope text-xl"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4
+                                        class="text-lg font-bold text-white">Email</h4>
+                                    <p
+                                        class="text-gray-400">entrenador@ejemplo.com</p>
+                                </div>
                             </div>
-                            <div class="ml-4">
-                                <h4 class="text-lg font-bold text-white">WhatsApp</h4>
-                                <p class="text-gray-400">+34 600 000 000</p>
+
+                            <div class="flex items-start">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-brand-yellow">
+                                    <i class="fab fa-instagram text-xl"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4
+                                        class="text-lg font-bold text-white">Instagram</h4>
+                                    <p
+                                        class="text-gray-400">@AlexFit_Oficial</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div
+                                    class="flex-shrink-0 w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center text-brand-yellow">
+                                    <i class="fab fa-whatsapp text-xl"></i>
+                                </div>
+                                <div class="ml-4">
+                                    <h4
+                                        class="text-lg font-bold text-white">WhatsApp</h4>
+                                    <p class="text-gray-400">+34 600 000 000</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Formulario -->
-                <div class="bg-brand-gray p-8 rounded-2xl shadow-lg border border-gray-800">
+                    <!-- Formulario -->
+                    <!--     <div class="bg-brand-gray p-8 rounded-2xl shadow-lg border border-gray-800">
                     <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                         <input type="hidden" name="form-name" value="contact">
                         <p class="hidden">
                             <label>No llenar si eres humano: <input name="bot-field"></label>
                         </p>
                         <div class="mb-6">
-                            <label for="name" class="block text-sm font-bold text-gray-400 mb-2 uppercase">Nombre Completo</label>
-                            <input type="text" id="name" name="name" required class="w-full bg-brand-black border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow transition" placeholder="Tu nombre">
+                            <label for="name" class="block text-sm font-bold text-gray-400 mb-2 uppercase">Nombre
+                                Completo</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full bg-brand-black border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow transition"
+                                placeholder="Tu nombre">
                         </div>
 
                         <div class="mb-6">
-                            <label for="email" class="block text-sm font-bold text-gray-400 mb-2 uppercase">Email</label>
-                            <input type="email" id="email" name="email" required class="w-full bg-brand-black border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow transition" placeholder="tu@email.com">
+                            <label for="email"
+                                class="block text-sm font-bold text-gray-400 mb-2 uppercase">Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full bg-brand-black border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow transition"
+                                placeholder="tu@email.com">
                         </div>
 
                         <div class="mb-6">
-                            <label for="plan" class="block text-sm font-bold text-gray-400 mb-2 uppercase">Interesado en</label>
-                            <select id="plan" name="plan" class="w-full bg-brand-black border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow transition">
+                            <label for="plan" class="block text-sm font-bold text-gray-400 mb-2 uppercase">Interesado
+                                en</label>
+                            <select id="plan" name="plan"
+                                class="w-full bg-brand-black border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow transition">
                                 <option>Selecciona una opción</option>
                                 <option>Plan Inicial</option>
                                 <option>Transformación</option>
 
-                        <div class="mb-6">
-                            <label for="message" class="block text-sm font-bold text-gray-400 mb-2 uppercase">Objetivo Principal</label>
-                            <textarea id="message" name="message" rows="4" class="w-full bg-brand-black border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow transition" placeholder="Cuéntame brevemente qué quieres conseguir..."></textarea>
-                        </div>
+                                <div class="mb-6">
+                                    <label for="message"
+                                        class="block text-sm font-bold text-gray-400 mb-2 uppercase">Objetivo
+                                        Principal</label>
+                                    <textarea id="message" name="message" rows="4"
+                                        class="w-full bg-brand-black border border-gray-700 rounded p-3 text-white focus:outline-none focus:border-brand-yellow focus:ring-1 focus:ring-brand-yellow transition"
+                                        placeholder="Cuéntame brevemente qué quieres conseguir..."></textarea>
+                                </div>
 
-                        <button type="submit" class="w-full bg-brand-yellow text-brand-black font-bold py-4 rounded hover:bg-white transition duration-300 uppercase tracking-wide">
-                            Enviar Mensaje
-                        </button>
+                                <button type="submit"
+                                    class="w-full bg-brand-yellow text-brand-black font-bold py-4 rounded hover:bg-white transition duration-300 uppercase tracking-wide">
+                                    Enviar Mensaje
+                                </button>
                     </form>
                 </div>
 
             </div>
-        </div>
-    </section>
+        </div>-->
 
-    <!-- Footer -->
-    <footer class="bg-brand-black border-t border-gray-900 py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
-            <div class="mb-4 md:mb-0">
-                <span class="text-2xl font-black text-white tracking-tighter">ALEX<span class="text-brand-yellow">FIT</span></span>
-            </div>
-            <div class="text-gray-500 text-sm">
-                &copy; 2024 AlexFit. Todos los derechos reservados.
-            </div>
-            <div class="flex space-x-4 mt-4 md:mt-0">
-                <a href="#" class="text-gray-500 hover:text-brand-yellow transition"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="text-gray-500 hover:text-brand-yellow transition"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-gray-500 hover:text-brand-yellow transition"><i class="fab fa-tiktok"></i></a>
-            </div>
-        </div>
-    </footer>
+                    <div class="bg-brand-gray p-10 rounded-2xl shadow-lg border border-gray-800">
+                            <p></p>
+                        <button type="submit"
+                            class="w-full bg-brand-yellow text-brand-black font-bold py-4 rounded hover:bg-white transition duration-300 uppercase tracking-wide mt-40">
+                            Enviar Mensaje
+                        </button>
+                    </div>
+                </section>
 
-    <!-- Scripts JavaScript -->
-    <script>
+                <!-- Footer -->
+                <footer class="bg-brand-black border-t border-gray-900 py-8">
+                    <div
+                        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+                        <div class="mb-4 md:mb-0">
+                            <span
+                                class="text-2xl font-black text-white tracking-tighter">ALEX<span
+                                    class="text-brand-yellow">FIT</span></span>
+                        </div>
+                        <div class="text-gray-500 text-sm">
+                            &copy; 2024 AlexFit. Todos los derechos reservados.
+                        </div>
+                        <div class="flex space-x-4 mt-4 md:mt-0">
+                            <a href="#"
+                                class="text-gray-500 hover:text-brand-yellow transition"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="#"
+                                class="text-gray-500 hover:text-brand-yellow transition"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a href="#"
+                                class="text-gray-500 hover:text-brand-yellow transition"><i
+                                    class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </footer>
+
+                <!-- Scripts JavaScript -->
+                <script>
         // Lógica del menú móvil
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
@@ -395,5 +588,6 @@
             });
         });
     </script>
-</body>
-</html>
+            </body>
+
+        </html>
