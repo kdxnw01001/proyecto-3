@@ -267,140 +267,155 @@
         </section>
 
         <!-- Sección Planes y Servicios -->
-        <section id="planes" class="py-20 bg-brand-gray relative overflow-hidden">
-            <!-- Elemento decorativo de fondo -->
-            <div
-                class="absolute top-0 right-0 w-64 h-64 bg-brand-yellow opacity-5 rounded-full filter blur-3xl translate-x-1/2 -translate-y-1/2 "></div>
+ <section id="planes" class="py-20 bg-brand-gray relative">
+        <!-- Elemento decorativo de fondo -->
+        <div
+            class="absolute top-0 right-0 w-64 h-64 bg-brand-yellow opacity-5 rounded-full filter blur-3xl translate-x-1/2 -translate-y-1/2">
+        </div>
 
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="text-center mb-16">
-                    <h3
-                        class="text-brand-yellow font-bold uppercase tracking-widest mb-2">Mis
-                        Servicios</h3>
-                    <h2 class="text-4xl md:text-5xl font-black text-white">ELIGE
-                        TU PLAN</h2>
-                    <div class="w-24 h-1 bg-brand-yellow mx-auto mt-6"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h3 class="text-brand-yellow font-bold uppercase tracking-widest mb-2">
+                    Mis Servicios
+                </h3>
+                <h2 class="text-4xl md:text-5xl font-black text-white">
+                    ELIGE TU PLAN
+                </h2>
+                <div class="w-24 h-1 bg-brand-yellow mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Plan Básico -->
+                <div
+                    class="bg-brand-black border border-gray-800 rounded-2xl p-8 hover:border-brand-yellow transition duration-300 transform hover:-translate-y-2 group">
+                    <div class="mb-6">
+                        <i class="fas fa-dumbbell text-4xl text-gray-600 group-hover:text-brand-yellow transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">ELIGES TÚ</h3>
+                    <p class="text-gray-400 text-sm mb-6">
+                        Ideal para empezar a moverte.
+                    </p>
+                    <div class="text-4xl font-black text-white mb-6">
+                        80 $<span class="text-lg text-gray-500 font-normal">/mes</span>
+                    </div>
+
+                    <ul class="space-y-4 mb-8 text-gray-300 text-sm">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-brand-yellow mr-2"></i> Entrenamiento Personalizado
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-brand-yellow mr-2"></i>
+                            Dieta Personalizada
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-brand-yellow mr-2"></i> Seguimiento
+                            cada 15 días
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-brand-yellow mr-2"></i> Clases
+                            presenciales (25$/sesion) en Miami, FL
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-times mr-2"></i> Contacto por WhatsApp
+                        </li>
+
+                    </ul>
+                    <a href="#contacto"
+                        class="block w-full text-center border border-white text-white py-3 rounded font-bold hover:bg-white hover:text-brand-black transition uppercase">Empezar</a>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Plan Básico -->
+                <!-- Plan Pro (Destacado) -->
+                <div
+                    class="bg-brand-black border-2 border-brand-yellow rounded-2xl p-8 transform md:-translate-y-4 shadow-[0_0_30px_rgba(250,204,21,0.15)] relative overflow-hidden">
                     <div
-                        class="bg-brand-black border border-gray-800 rounded-2xl p-8 hover:border-brand-yellow transition duration-300 transform hover:-translate-y-2 group">
-                        <div class="mb-6">
-                            <i
-                                class="fas fa-dumbbell text-4xl text-gray-600 group-hover:text-brand-yellow transition"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2">ELIGES
-                            TU</h3>
-                        <p class="text-gray-400 text-sm mb-6">Ideal para empezar
-                            a moverte.</p>
-                        <div
-                            class="text-4xl font-black text-white mb-6">80$<span
-                                class="text-lg text-gray-500 font-normal">/mes</span></div>
-
-                        <ul class="space-y-4 mb-8 text-gray-300 text-sm">
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-brand-yellow mr-2"></i>
-                                Dieta personalizada</li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-brand-yellow mr-2"></i>
-                                Entrenamiento Personalizado</li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-brand-yellow mr-2"></i>
-                                Seguimiento cada 15 dias</li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-brand-yellow mr-2"></i>
-                                Clases presenciales (25$/sesion) en Miami
-                                FL</li>
-
-                        </ul>
-                        <a href="#contacto"
-                            class="block w-full text-center border border-white text-white py-3 rounded font-bold hover:bg-white hover:text-brand-black transition uppercase">Empezar</a>
+                        class="absolute top-0 right-0 bg-brand-yellow text-brand-black text-xs font-bold px-3 py-1 uppercase">
+                        Más Popular
+                    </div>
+                    <div class="mb-6">
+                        <i class="fas fa-fire text-4xl text-brand-yellow"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">ONLINE</h3>
+                    <p class="text-gray-400 text-sm mb-6">
+                        Resultados acelerados y seguimiento.
+                    </p>
+                    <div class="text-4xl font-black text-white mb-6">
+                        100 $<span class="text-lg text-gray-500 font-normal">/mes</span>
                     </div>
 
-                    <!-- Plan Pro (Destacado) -->
-                    <div
-                        class="bg-brand-black border-2 border-brand-yellow rounded-2xl p-8 transform md:-translate-y-4 shadow-[0_0_30px_rgba(250,204,21,0.15)] relative overflow-hidden">
-                        <div
-                            class="absolute top-0 right-0 bg-brand-yellow text-brand-black text-xs font-bold px-3 py-1 uppercase">Más
-                            Popular</div>
-                        <div class="mb-6">
-                            <i
-                                class="fas fa-fire text-4xl text-brand-yellow"></i>
-                        </div>
-                        <h3
-                            class="text-xl font-bold text-white mb-2">ONLINE</h3>
-                        <p class="text-gray-400 text-sm mb-6">Resultados
-                            acelerados y seguimiento.</p>
-                        <div
-                            class="text-4xl font-black text-white mb-6">100$<span
-                                class="text-lg text-gray-500 font-normal">/mes</span></div>
+                    <ul class="space-y-4 mb-8 text-gray-300 text-sm">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-brand-yellow mr-2"></i>
+                            Entrenamiento Personalizado
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-brand-yellow mr-2"></i> Dieta
+                            Personalizada
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-brand-yellow mr-2"></i> Vídeos
+                            explicativos
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-brand-yellow mr-2"></i> Clase
+                            Presencial Gratuita Miami, FL
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-brand-yellow mr-2"></i> Seguimiento
+                            Semanal
+                        </li>
+                        <li class="flex items-center text-color grey:600">
+                            <i class="fas fa-check text-brand-yellow mr-2"></i> Comunicación
+                            directa vía WhatsApp
+                        </li>
+                    </ul>
+                    <a href="#contacto"
+                        class="block w-full text-center bg-brand-yellow text-brand-black py-3 rounded font-bold hover:bg-white transition uppercase shadow-lg">Elegir
+                        Plan</a>
+                </div>
 
-                        <ul class="space-y-4 mb-8 text-gray-300 text-sm">
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-brand-yellow mr-2 "></i>
-                                Entrenamiento Personalizado</li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-brand-yellow mr-2"></i>
-                                Dieta Personalizada</li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-brand-yellow mr-2"></i>
-                                Videos Explicativos</li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-brand-yellow mr-2"></i>
-                                Clase Presencial Gratuita Miami FL</li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-brand-yellow mr-2"></i>
-                                Seguimiento Semanal</li>
-                            <li class="flex items-center text-color grey:600"><i
-                                    class="fas fa-check text-brand-yellow mr-2"></i>
-                                Comunicacion directa via WhatsApp</li>
-                        </ul>
-                        <a href="#contacto"
-                            class="block w-full text-center bg-brand-yellow text-brand-black py-3 rounded font-bold hover:bg-white transition uppercase shadow-lg">Elegir
-                            Plan</a>
+                <!-- Plan Élite -->
+                <div
+                    class="bg-brand-black border border-gray-800 rounded-2xl p-8 hover:border-brand-yellow transition duration-300 transform hover:-translate-y-2 group">
+                    <div class="mb-6">
+                        <i class="fas fa-crown text-4xl text-gray-600 group-hover:text-brand-yellow transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">PRESENCIAL 1 A 1</h3>
+                    <p class="text-gray-400 text-sm mb-6">Máxima atención y detalle.</p>
+                    <div class="text-4xl font-black text-white mb-2">
+                        100 $<span class="text-lg text-gray-500 font-normal">/semana</span>
+                    </div>
+                    <div class="text-1xl font-black text-white mb-6">
+                        25 $<span class="text-lg text-gray-500 font-normal">/semana</span>
                     </div>
 
-                    <!-- Plan Élite -->
-                    <div
-                        class="bg-brand-black border border-gray-800 rounded-2xl p-8 hover:border-brand-yellow transition duration-300 transform hover:-translate-y-2 group">
-                        <div class="mb-6">
-                            <i
-                                class="fas fa-crown text-4xl text-gray-600 group-hover:text-brand-yellow transition"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2">PRESENCIAL
-                            1 A 1</h3>
-                        <p class="text-gray-400 text-sm mb-6">Máxima atención y
-                            detalle.</p>
-                        <div
-                            class="text-4xl font-black text-white mb-6">100$<span
-                                class="text-lg text-gray-500 font-normal">/5
-                                días</span></div>
-
-                        <ul class="space-y-4 mb-8 text-gray-300 text-sm">
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-brand-yellow mr-2"></i>
-                                Dieta Personalizada</li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-brand-yellow mr-2"></i>
-                                Entrenamiento Personalizado</li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-brand-yellow mr-2"></i>
-                                Seguimiento 24/7</li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-brand-yellow mr-2"></i>
-                                Maximo 4 Personas por sesion</li>
-                            <li class="flex items-center"><i
-                                    class="fas fa-check text-brand-yellow mr-2"></i>
-                                Entrena conmigo, me puedo acercar</li>
-
-                        </ul>
-                        <a href="#contacto"
-                            class="block w-full text-center border border-white text-white py-3 rounded font-bold hover:bg-white hover:text-brand-black transition uppercase">Aplicar</a>
-                    </div>
+                    <ul class="space-y-4 mb-8 text-gray-300 text-sm">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-brand-yellow mr-2"></i> Dieta
+                            Personalizada
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-brand-yellow mr-2"></i>
+                            Entrenamiento Personalizado
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-brand-yellow mr-2"></i> Seguimiento
+                            24/7
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-brand-yellow mr-2"></i> Máximo 4
+                            Personas por sesión
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-brand-yellow mr-2"></i> Entrena
+                            conmigo, me puedo acercar
+                        </li>
+                    </ul>
+                    <a href="#contacto"
+                        class="block w-full text-center border border-white text-white py-3 rounded font-bold hover:bg-white hover:text-brand-black transition uppercase">Aplicar</a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
         <!-- Sección CTA Intermedia -->
         <section class="py-16 bg-brand-yellow text-brand-black">
@@ -430,7 +445,7 @@
                         <h2 class="text-4xl font-black text-white mb-6">EMPIEZA
                             TU CAMBIO</h2>
                         <p class="text-gray-400 mb-10">
-                            Escribeme por WhatsApp o contáctame directamente por
+                            Escríbeme por WhatsApp o contáctame directamente por
                             redes sociales. Estoy listo para ayudarte a
                             conseguir el cuerpo que deseas.
                         </p>
